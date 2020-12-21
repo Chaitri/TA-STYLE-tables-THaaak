@@ -1,0 +1,503 @@
+:root {
+    --primary : #ed563a;
+    --secondary : #ffffff;
+    --textDark : #232d38;
+    --textLight : #6e6e6e;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse; 
+	border-spacing: 0;
+}
+
+/* GENERIC */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.7;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+.content-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-40 {
+    flex: 0 1 40%;
+}
+
+.flex-46 {
+    flex: 0 1 46%;
+}
+
+.flex-65 {
+    flex: 0 1 65%;
+}
+
+.align-stretch {
+    align-items: stretch;
+}
+
+.justify-evenly {
+    justify-content: space-evenly;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: box-shadow 200ms ease-in-out;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+
+.primary-text {
+    color: var(--primary);
+}
+
+.section-intro {
+    padding: 40px 0;
+    text-align: center;
+    width: 600px;
+    margin: 0 auto;
+}
+
+.section-heading {
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.section-content {
+    color: var(--textLight);
+    margin-top: 20px;
+}
+
+/* HEADER */
+
+.header {
+    padding: 20px 0;
+    background-color: rgba(103, 110, 117, 0.5);
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+.brand {
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--secondary);
+}
+
+.brand span {
+    color: var(--primary);
+}
+
+.nav-bar a {
+    display: inline-block;
+    color: var(--secondary);
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-left: 32px;
+    font-weight: 500;
+}
+
+.nav-bar .active{
+    color: var(--primary);
+}
+
+.nav-bar a:hover {
+    color: var(--primary);
+}
+
+a.btn:hover {
+    color: var(--secondary);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+    background-color: rgba(237, 86, 58, 0.9);
+}
+
+
+/* HERO */
+
+.hero {
+    position: relative;
+    color: var(--secondary);
+    text-align: center;
+}
+
+video {
+    width: 100%;
+    font-size: 0;
+}
+
+.overlay {
+    background-color:rgba(1, 0, 20, 0.7);
+    position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.hero-content {
+    position: absolute;
+	top: 40%;
+	left: 30%;
+    z-index: 2;
+    text-transform: uppercase;
+}
+
+.hero-subheading {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.hero-heading {
+    font-size: 54px;
+    font-weight: 700;
+    margin: 16px 0;
+}
+
+/* PORGRAM */
+
+.program {
+    padding: 80px 0;
+}
+
+.program-item {
+    margin-top: 60px;
+}
+
+.program-feature {
+    width: 90px;
+}
+
+.program-content {
+    margin-left: 20px;
+}
+
+.program-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 3px;
+    color: var(--textDark);
+    text-transform: capitalize;
+}
+
+.program-desc {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 3px;
+    color: var(--textLight);
+}
+
+.program-content a {
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.program-content a:hover {
+    text-decoration: underline;
+}
+
+/* MEMBER */
+
+.member {
+    padding: 80px 0;
+    background: url("../cta-bg.jpg");
+    background-size: cover;
+    text-align: center;
+    color: var(--secondary);
+}
+
+.member h1 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.member p {
+    margin: 20px 0;
+}
+
+/* CLASSES */
+
+.classes {
+    padding: 80px 0;
+}
+
+.class-content {
+    margin-top: 40px;
+}
+
+.training-item a{
+    box-shadow: 2px 2px 6px #ccc;
+    margin-bottom: 30px;
+    padding: 20px;
+    width: 80%;
+    color: var(--textDark);
+    font-weight: 700;
+    
+}
+
+.training-item img {
+    margin-left: 30px;
+}
+
+.training-item .active {
+    color: var(--primary);
+}
+
+.aside-info {
+    width: 80%;
+    text-align: center;
+}
+
+.training-content h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 20px 0;
+    color: var(--textDark);
+}
+
+.training-content p {
+    margin: 20px 0;
+    font-size: 14px;
+    color: var(--textLight);
+}
+
+/* SCHEDULE */
+
+.schedule {
+    background: url("../schedule-bg.jpg");
+    padding: 80px 0;
+}
+
+.schedule .section-heading {
+    color: var(--secondary);
+}
+
+.schedule .section-content {
+    color: #ccc;
+
+}
+
+.schedule-info {
+    width: 700px;
+    margin: 0 auto;
+}
+
+.schedule-info .days {
+    text-align: center;
+    
+}
+
+.days a, .days span{
+    color: rgb(228, 227, 227);
+    font-size: 14px;
+    margin: 0 3px;
+}
+
+.days a.active {
+    color: var(--primary);
+}
+
+.days a:hover {
+    color: var(--primary);
+}
+
+.schedule-table {
+    margin: 40px 0;
+    border: 1px solid white;
+    color: var(--secondary);
+    text-align: center;
+}
+
+.schedule-table td, .schedule-table th {
+    border: 1px solid white;
+    padding: 30px;
+    font-size: 12px;
+    color: #ccc;
+    font-weight: 500;
+}
+
+/* TRAINERS */
+
+.trainers {
+    padding: 80px 0;
+}
+
+.trainer {
+    width: 30%;
+    padding: 20px;
+    box-shadow: 2px 2px 12px rgba(182, 182, 182, 0.6);
+    margin-bottom: 30px;
+}
+
+.skill {
+    margin: 10px 0;
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.name {
+    font-size: 20px;
+    color: var(--textDark);
+    font-weight: 600;
+}
+
+.trainer-desc {
+    font-size: 14px;
+    color: rgb(134, 134, 134);
+    margin: 10px 0;
+    font-weight: 500;
+}
+
+.socials i {
+    display: inline-block;
+    margin-right: 10px;
+    color: rgb(39, 39, 39);
+    font-size: 14px;
+}
+
+.socials i:hover {
+    color: var(--primary);
+}
+
+/* CONTACT */
+
+.contact-us {
+    background: url("../contact-bg.jpg");
+    height: 450px;
+    width: 50%;
+    position: relative;
+}
+
+.contact-form {
+    width: 75%;
+    position: absolute;
+    top: 6%;
+    left: 12%;
+    background-color: white;
+    padding: 30px;
+}
+
+.form-control {
+    display: block;
+    border: 1px solid rgb(209, 209, 209);
+    padding: 10px;
+    margin-bottom: 20px;
+    color: var(--textLight);
+    font-size: 12px;
+    width: 100%;
+}
+
+textarea::placeholder {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: var(--textLight);
+}
+
+.form-control:focus {
+    border-color: var(--primary);
+}
+
+.contact-form .btn {
+    border: none;
+    outline: 0;
+    font-weight: 300;
+}
+
+.contact-form .btn:hover {
+    color: var(--secondary);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+    background-color: rgba(237, 86, 58, 0.9);
+}
+
+/* FOOTER */
+
+.footer {
+    padding: 20px 0;
+    text-align: center;
+    color: var(--textLight);
+    font-size: 12px;
+    font-weight: 500;
+}
